@@ -1,5 +1,4 @@
 # TicketingSystemApplication
-ticketing
 Project ini bertema tentang ticketing system. Dimana terdapat suatu perusahaan yang membutuhkan ticketing system untuk internal office saat
 karyawan membutuhkan bantuan pelayanan tim teknis. Hal ini dapat berupa seperti perbaikan server, kebutuhan alat-alat kerja IT, perbaikan internet, dan lainnya yang akan membantu kinerja perusahaan.
 Flow project ini sederhana yaitu CRUD employee dan CRUD ticket. Database SQL yang digunakan sudah disertakan di dalam project ini dengan nama Ticket.
