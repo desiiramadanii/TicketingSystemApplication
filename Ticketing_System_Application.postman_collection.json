@@ -34,7 +34,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\" : \"T03\",\r\n    \"firstName\" : \"Rony\",\r\n    \"lastName\" : \"Saputra\",\r\n    \"birthDate\" : \"28 Mei 1996\",\r\n    \"phone\" : \"087847394755\",\r\n    \"jobId\" : \"2\"\r\n}",
+							"raw": "{\r\n    \"id\" : \"M03\",\r\n    \"firstName\" : \"Kurnia\",\r\n    \"lastName\" : \"Wijaya\",\r\n    \"birthDate\" : \"06 September 1995\",\r\n    \"phone\" : \"081294733849\",\r\n    \"jobId\" : \"3\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -88,14 +88,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/employee/delete/1",
+							"raw": "{{base_url}}/employee/delete/A03",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"employee",
 								"delete",
-								"1"
+								"A03"
 							]
 						}
 					},
@@ -185,7 +185,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\" : \"TC003\",\r\n    \"title\" : \"Menggantikan modem pada ruangan 3\",\r\n    \"details\" : \"Diperlukan karena modem yang saat ini sedang tidak berfungsi semestinya\",\r\n    \"dueDate\" : \"13 Januari 2022\",\r\n    \"urgency\" : \"HIGH\",\r\n    \"createdById\" : \"A02\",\r\n    \"appointedToId\" : \"T02\"\r\n\r\n}",
+							"raw": "{\r\n    \"id\" : \"TC005\",\r\n    \"title\" : \"Menggantikan modem pada ruangan 9\",\r\n    \"details\" : \"Diperlukan karena modem yang saat ini sedang tidak berfungsi semestinya\",\r\n    \"dueDate\" : \"13 Juni 2022\",\r\n    \"urgency\" : \"HIGH\",\r\n    \"createdById\" : \"A02\",\r\n    \"appointedToId\" : \"T02\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -212,7 +212,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\" : \"Perbaikan Server Lt. 5\",\r\n    \"details\" : \"Server mengalami RTO setiap beberapa jam, kendala awalnya mulai saat suhu ruangan < 20 celcius\",\r\n    \"dueDate\" : \"19 Januari 2022\",\r\n    \"urgency\" : \"HIGH\"\r\n}",
+							"raw": "{\r\n    \"title\" : \"Perbaikan Server Lt. 5\",\r\n    \"details\" : \"Server mengalami RTO setiap beberapa jam, kendala awalnya mulai saat suhu ruangan < 20 celcius\",\r\n    \"dueDate\" : \"12 Juni 2022\",\r\n    \"urgency\" : \"HIGH\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -220,14 +220,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/ticket/update/TC001",
+							"raw": "{{base_url}}/ticket/update/TC004",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"ticket",
 								"update",
-								"TC001"
+								"TC004"
 							]
 						}
 					},
@@ -239,14 +239,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/ticket/delete/TC001",
+							"raw": "{{base_url}}/ticket/delete/TC004",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"ticket",
 								"delete",
-								"TC001"
+								"TC004"
 							]
 						}
 					},
@@ -258,14 +258,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/ticket/getTicketById/TC001",
+							"raw": "{{base_url}}/ticket/getTicketById/TC003",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"ticket",
 								"getTicketById",
-								"TC001"
+								"TC003"
 							]
 						}
 					},
@@ -277,14 +277,14 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/ticket/updateStatus/TC002",
+							"raw": "{{base_url}}/ticket/updateCanceled/TC004",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"ticket",
-								"updateStatus",
-								"TC002"
+								"updateCanceled",
+								"TC004"
 							]
 						}
 					},
@@ -305,14 +305,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/ticket/history/TC001",
+							"raw": "{{base_url}}/ticket/updateCompleted/TC003",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"ticket",
-								"history",
-								"TC001"
+								"updateCompleted",
+								"TC003"
 							]
 						}
 					},
@@ -342,13 +342,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/ticket/get-all-year/2022",
+							"raw": "{{base_url}}/ticket/get-all-date/2022",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"ticket",
-								"get-all-year",
+								"get-all-date",
 								"2022"
 							]
 						}
@@ -361,14 +361,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/ticket/get-all-status/IN_PROGRESS",
+							"raw": "{{base_url}}/ticket/get-all-status/COMPLETED",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"ticket",
 								"get-all-status",
-								"IN_PROGRESS"
+								"COMPLETED"
 							]
 						}
 					},
