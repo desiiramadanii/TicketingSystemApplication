@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "85a0c8c4-b635-4bbb-a0ce-6e9fba56ce26",
+		"name": "Ticketing_System_Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20494928"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Menampilkan Seluruh Data Employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/employee/getAllEmployee",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"getAllEmployee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menambahkan Employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"T03\",\r\n    \"firstName\" : \"Rony\",\r\n    \"lastName\" : \"Saputra\",\r\n    \"birthDate\" : \"28 Mei 1996\",\r\n    \"phone\" : \"087847394755\",\r\n    \"jobId\" : \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/employee/insert",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\" : \"Silla\",\r\n    \"lastName\" : \"Aprilia\",\r\n    \"birthDate\" : \"29 Juli 1998\",\r\n    \"phone\" : \"081294857760\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/employee/update/A01",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"update",
+								"A01"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/employee/delete/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menampilkan Seluruh Data Employee Technical Support",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/employee/get-all-ts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"get-all-ts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menampilkan Technical Support yang sedang bekerja",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/employee/get-all-ts-working",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"get-all-ts-working"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menampilkan Technical Support yang tidak bekerja",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/employee/get-all-ts-not-work",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employee",
+								"get-all-ts-not-work"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "Menampilkan Seluruh Ticket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ticket/getAllTicket",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ticket",
+								"getAllTicket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menambahkan Ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"TC003\",\r\n    \"title\" : \"Menggantikan modem pada ruangan 3\",\r\n    \"details\" : \"Diperlukan karena modem yang saat ini sedang tidak berfungsi semestinya\",\r\n    \"dueDate\" : \"13 Januari 2022\",\r\n    \"urgency\" : \"HIGH\",\r\n    \"createdById\" : \"A02\",\r\n    \"appointedToId\" : \"T02\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ticket/insert",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ticket",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ticket",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Perbaikan Server Lt. 5\",\r\n    \"details\" : \"Server mengalami RTO setiap beberapa jam, kendala awalnya mulai saat suhu ruangan < 20 celcius\",\r\n    \"dueDate\" : \"19 Januari 2022\",\r\n    \"urgency\" : \"HIGH\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ticket/update/TC001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ticket",
+								"update",
+								"TC001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ticket",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ticket/delete/TC001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ticket",
+								"delete",
+								"TC001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menampilkan Ticket Berdasarkan Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ticket/getTicketById/TC001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ticket",
+								"getTicketById",
+								"TC001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ticket Menjadi Canceled",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ticket/updateStatus/TC002",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ticket",
+								"updateStatus",
+								"TC002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ticket Menjadi Completed",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Kendala terselesaikan dengan reset server dan melakukan maintenance\",\r\n    \"completedDate\" : \"16 Januari 2022\",\r\n    \"approvedById\" : \"M01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ticket/history/TC001",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ticket",
+								"history",
+								"TC001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menampilkan Ticket History",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ticket/getAllTicketHistory",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ticket",
+								"getAllTicketHistory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menampilkan Ticket Berdasarkan Duedate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ticket/get-all-year/2022",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ticket",
+								"get-all-year",
+								"2022"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menampilkan Ticket History Berdasarkan Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ticket/get-all-status/IN_PROGRESS",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ticket",
+								"get-all-status",
+								"IN_PROGRESS"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menampilkan Ticket History Berdasarkan Urgency",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ticket/get-all-urgency/MEDIUM",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ticket",
+								"get-all-urgency",
+								"MEDIUM"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:8081",
+			"type": "string"
+		}
+	]
+}
