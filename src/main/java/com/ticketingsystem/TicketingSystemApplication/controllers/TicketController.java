@@ -7,6 +7,7 @@ import com.ticketingsystem.TicketingSystemApplication.dtos.ticket.TicketUpdateDt
 import com.ticketingsystem.TicketingSystemApplication.dtos.ticketHistory.TicketHistoryDto;
 import com.ticketingsystem.TicketingSystemApplication.dtos.ticketHistory.TicketHistoryGridDto;
 import com.ticketingsystem.TicketingSystemApplication.services.TicketService;
+import com.ticketingsystem.TicketingSystemApplication.services.TicketServiceImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,7 @@ public class TicketController {
     private TicketService ticketService;
 
     @Autowired
-    public TicketController(TicketService ticketService){
+    public TicketController(TicketServiceImplementation ticketService){
         this.ticketService = ticketService;
     }
 

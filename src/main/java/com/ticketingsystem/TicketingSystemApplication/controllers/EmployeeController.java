@@ -5,6 +5,7 @@ import com.ticketingsystem.TicketingSystemApplication.dtos.employee.EmployeeGrid
 import com.ticketingsystem.TicketingSystemApplication.dtos.employee.EmployeeInsertDto;
 import com.ticketingsystem.TicketingSystemApplication.dtos.employee.EmployeeUpdateDto;
 import com.ticketingsystem.TicketingSystemApplication.services.EmployeeService;
+import com.ticketingsystem.TicketingSystemApplication.services.EmployeeServiceImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +20,7 @@ public class EmployeeController {
     private EmployeeService employeeService;
 
     @Autowired
-    public EmployeeController(EmployeeService employeeService) {
+    public EmployeeController(EmployeeServiceImplementation employeeService) {
         this.employeeService = employeeService;
     }
 
